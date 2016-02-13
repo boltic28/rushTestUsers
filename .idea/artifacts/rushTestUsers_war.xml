@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="rushTestUsers:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="rushTestUsers-2.0.war">
+      <element id="artifact" artifact-name="rushTestUsers:war exploded" />
+    </root>
+  </artifact>
+</component>
