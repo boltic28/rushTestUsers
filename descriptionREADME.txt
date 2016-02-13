@@ -7,11 +7,36 @@
  - Tomcat 8.0.30
  - Vaadin 7.6.2
  - MySQL server 5.7
- - Google chrome(view project)
+ - Google chrome
 
  Описание.
 =======================
 
+    USER_NAME = "root";
+
+    USER_PASS = "root";
+
+    USER_URL = "jdbc:mysql://localhost:3306/test";
+
+    Характеристика таблицы:
+   -----------------------------------------------------------
+  |   id    |   name   |  age    |  isAdmin  |  createdDate   |
+    id (int 8)              -  PK, NN, AI
+    name (varchar 25)       -  NN
+    age (int 3)             -
+    isAdmin (bit 1)         -  NN
+    createdDate (timestamp) -
+==========================
+    TomCat работает на localhost:8080
+==========================
+    Модель MVC, ну как-то так:
+
+    ViewControl   -  ControlService   -        ModelControl
+       |                                   /         |          \
+    Helper                               User   GnrCommand   JDBCconnector
+
+=============================
+    P.S.
     Приложение создавал на основе примера использование библиотеки Vaadin (Vaadin.com),
     поэтому бонусом прикручен фильтр, с нуля что-то мне слабо было начать, но на момент
     написания приложения много узнал нового, и я думаю что смог бы при  некоторых усилиях
@@ -21,5 +46,4 @@
 
     Да по поводу boolean isAdmin, так сложилось что она у меня не boolean, sorry.
     Это потому му что я не допер ещё как устроен и работает BeanFieldGroup<User>, ну это
-    исправимо.
-
+    исправимо, ведь так?

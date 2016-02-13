@@ -38,7 +38,7 @@ public class JDBCconnector {
         }
 
         try {
-            connection = DriverManager.getConnection(USER_URL, USER_NAME, ""); // change pass to constant
+            connection = DriverManager.getConnection(USER_URL, USER_NAME, USER_PASS); // change pass to constant
             System.out.println("Base connected");
         }catch (SQLException e) {
             System.out.println("connect error");
